@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_sections_lists",
+  "info": {
+    "displayName": "List",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "string"
+    },
+    "starts": {
+      "type": "date"
+    },
+    "ends": {
+      "type": "date"
+    },
+    "Positon": {
+      "type": "integer"
+    },
+    "page": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::page.page"
+    }
+  }
+}
