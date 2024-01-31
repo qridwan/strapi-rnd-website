@@ -17,7 +17,7 @@ export default async function LayoutRoute({
 			<div className="grid grid-cols-1 md:grid-cols-3 gap-2 lg:gap-4">
 				<div className="col-span-2">{children}</div>
 				<aside>
-
+					{/* Apply Now */}
 				</aside>
 			</div>
 		</section>

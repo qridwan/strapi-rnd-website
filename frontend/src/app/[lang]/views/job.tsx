@@ -1,6 +1,7 @@
 import { formatDate, getStrapiMedia } from '@/app/[lang]/utils/api-helpers';
 import { postRenderer } from '@/app/[lang]/utils/post-renderer';
 import Image from 'next/image';
+import RichText from '../components/RichText';
 
 interface Article {
 	id: number;
@@ -8,6 +9,7 @@ interface Article {
 		title: string;
 		description: string;
 		slug: string;
+		ApplicationEnd: string;
 		cover: {
 			data: {
 				attributes: {
@@ -22,7 +24,7 @@ interface Article {
 }
 
 export default function Job({ data }: { data: Article }) {
-	const { title, description, publishedAt, cover } = data.attributes;
+	const { title, description, publishedAt, cover, ApplicationEnd } = data.attributes;
 
 	const imageUrl = getStrapiMedia(cover?.data?.attributes.url);
 
@@ -39,13 +41,14 @@ export default function Job({ data }: { data: Article }) {
 			)}
 			<div className="space-y-6">
 				<h1 className="leading-tight text-5xl font-bold ">{title}</h1>
-				<p>{publishedAt}</p>
+				<p>{formatDate(publishedAt)}</p>
+				<p className='underline bold'>Application Ends in : {formatDate(ApplicationEnd)}</p>
 
 			</div>
 
 			<div className="dark:text-gray-100">
-				<p>{description}</p>
-
+				{/* <p>{description}</p> */}
+				<RichText data={{ body: description }} />
 				{/* {data.attributes.blocks.map((section: any, index: number) => postRenderer(section, index))} */}
 			</div>
 		</article>
