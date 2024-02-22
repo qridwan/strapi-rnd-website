@@ -4,10 +4,16 @@ import Testimonials from "../components/Testimonials";
 import Pricing from "../components/Pricing";
 import Email from "../components/Email";
 import RichText from "../components/RichText";
+import Marquee from "../components/Marquee";
+import ImageSlider from "../components/ImageSlider";
 
 export function sectionRenderer(section: any, index: number) {
-	console.log('section: ', section);
+	console.log('===> section: ==> ', section)
 	switch (section.__component) {
+		case "sections.marquees":
+			return <Marquee key={index} data={section} />;
+		// case "shared.slider":
+		// 	return <ImageSlider key={index} data={section} />;
 		case "sections.hero":
 			return <Hero key={index} data={section} />;
 		case "sections.features":

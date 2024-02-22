@@ -22,6 +22,18 @@
       "type": "component",
       "repeatable": false,
       "component": "layout.logo"
+    },
+    "title": {
+      "type": "string"
+    },
+    "motto": {
+      "type": "string"
+    },
+    "eiin": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
     }
   }
 }

@@ -40,9 +40,10 @@
         "sections.features",
         "sections.heading",
         "sections.list",
-        "shared.slider",
         "shared.video-embed",
-        "shared.seo"
+        "shared.seo",
+        "sections.marquees",
+        "sections.banner-slider"
       ],
       "pluginOptions": {
         "i18n": {

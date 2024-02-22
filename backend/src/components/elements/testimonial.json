@@ -19,10 +19,6 @@
     "text": {
       "type": "text",
       "required": true
-    },
-    "authorName": {
-      "type": "string",
-      "required": true
     }
   }
 }

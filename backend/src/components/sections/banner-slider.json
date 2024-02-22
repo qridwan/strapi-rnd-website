@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sections_banner_sliders",
+  "info": {
+    "displayName": "banner-slider",
+    "icon": "landscape",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "testimonials": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.testimonial"
+    }
+  }
+}

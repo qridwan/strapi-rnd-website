@@ -16,9 +16,13 @@ export default async function RootRoute({ params }: { params: { lang: string } }
 		if (page.data.length === 0) return null
 		const contentSections = page.data[0].attributes.contentSections
 		console.log('contentSections: ', contentSections);
-		return contentSections.map((section: any, index: number) =>
-			sectionRenderer(section, index)
-		)
+		return <div className='bg-light'>
+			{
+				contentSections.map((section: any, index: number) =>
+					sectionRenderer(section, index)
+				)
+			}
+		</div>
 	} catch (error: any) {
 		window.alert('Missing or invalid credentials')
 	}
